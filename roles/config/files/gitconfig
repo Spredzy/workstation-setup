@@ -1,0 +1,28 @@
+[user]
+    name = Yanis Guenane
+    email = yguenane@gmail.com
+
+[github]
+    user = Spredzy
+
+[core]
+    edit = vim
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    editor = vim
+    pager = less -FRSX
+
+[diff]
+    tool = vimdiff
+    noprefix = true
+
+[tig]
+    show-id = yes
+
+[fetch]
+    prune = true
+
+[web]
+    browser = firefox
+
+[remote "upstream"]
+    fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*

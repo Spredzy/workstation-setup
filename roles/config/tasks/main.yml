@@ -1,0 +1,14 @@
+---
+- name: Apply config
+  copy:
+    src: '{{ item.src }}'
+    dest: '{{ item.dest }}'
+  loop:
+    - {'src': 'gitconfig', 'dest': '~/.gitconfig'}
+    - {'src': 'gitignore', 'dest': '~/.gitignore'}
+    - {'src': 'xinitrc', 'dest': '~/.xinitrc'}
+    - {'src': 'xsession', 'dest': '~/.xsession'}
+    - {'src': 'Xdefaults', 'dest': '~/.Xdefaults'}
+    - {'src': 'tmux.conf', 'dest': '~/.tmux.conf'}
+    - {'src': 'vimrc', 'dest': '~/.vimrc'}
+    - {'src': 'kids.jpg', 'dest': '~/.wallpaper.jpg'}

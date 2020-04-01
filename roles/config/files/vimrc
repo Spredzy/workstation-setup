@@ -1,0 +1,94 @@
+:imap jj <Esc>
+let mapleader = "\<Space>"
+let maplocalleader = "."
+
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null'
+
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 30
+let g:netrw_browse_split = 4
+
+set numberwidth=3
+set number
+
+:nnoremap <Leader>ev :vsplit $MYVIMRC<cr>
+:nnoremap <Leader>sv :source $MYVIMRC<cr>
+
+filetype plugin indent on
+syntax on
+
+set backspace=indent,eol,start
+set nocompatible
+
+" Improve visual content
+"
+set ruler
+set cursorline
+set laststatus=2
+set encoding=utf-8
+color peachpuff
+
+" Display character to show invisible ones
+"
+set list
+set listchars=tab:>- " Display character for Tabs
+set listchars=trail:«
+
+" add yaml stuffs
+" au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
+" autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml setlocal ai ts=2 sw=2 sts=2 et
+
+" Plugin
+call plug#begin('~/.vim/plugged')
+Plug 'kien/ctrlp.vim'
+Plug 'mileszs/ack.vim'
+Plug 'w0rp/ale'
+Plug 'kannokanno/previm'
+Plug 'janko-m/vim-test'
+Plug 'psf/black'
+call plug#end()
+
+" vim-licenses
+let g:licenses_authors_name = 'Yanis Guenane  <yanis@guenane.org>'
+let g:licenses_copyright_holders_name = 'Yanis Guenane  <yanis@guenane.org>'
+
+nmap oo <Plug>(openbrowser-open)
+
+let myname = 'Yanis Guenane'
+let myemail = 'yanis@guenane.org'
+
+function! ToggleSyntax()
+   if exists("g:syntax_on")
+      syntax off
+   else
+      syntax enable
+   endif
+endfunction
+
+function! CapitalizeCenterAndMoveDown()
+   s/\<./\u&/g   "Built-in substitution capitalizes each word
+   center        "Built-in center command centers entire line
+   +1            "Built-in relative motion (+1 line down)
+endfunction
+
+nmap <silent>  ;s  :call ToggleSyntax()<CR>
+nmap <silent>  \C  :call CapitalizeCenterAndMoveDown()<CR>
+
+" Search mappings: These will make it so that going to the next one in a
+" search will center on the line it's found in.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+let vim_markdown_preview_github=1
+let vim_markdown_preview_use_xdg_open=1
+
+
+
+" let &colorcolumn=join(range(81,999),",")
+" highlight ColorColumn ctermbg=235 guibg=#2c2d27
+"
+" set textwidth=80
+set colorcolumn=+1
+
+au BufRead /tmp/mutt-* set tw=72

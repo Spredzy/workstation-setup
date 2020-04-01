@@ -4,3 +4,7 @@
     - name: Include packages role
       include_role:
         name: packages
+
+    - name: Include config role
+      include_role:
+        name: config

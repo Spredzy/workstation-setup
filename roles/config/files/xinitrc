@@ -1,0 +1,4 @@
+#!/bin/sh
+
+feh --bg-fill /home/spredzy/.wallpaper.jpg
+/usr/bin/i3
