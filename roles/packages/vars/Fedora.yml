@@ -11,6 +11,7 @@ environment_packages:
   - slim
   - tuned
   - xbacklight
+  - chrony
 
 work_packages:
   - ack
