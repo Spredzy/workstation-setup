@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Include packages role
+      include_role:
+        name: packages

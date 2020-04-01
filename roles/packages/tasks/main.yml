@@ -1,0 +1,28 @@
+---
+- name: Include Operating System specific vars
+  include_vars: '{{ ansible_distribution }}.yml'
+
+- name: Install environment packages
+  become: true
+  package:
+    name: '{{ environment_packages }}'
+
+- name: Install work packages
+  become: true
+  package:
+    name: '{{ work_packages }}'
+
+- name: Install network packages
+  become: true
+  package:
+    name: '{{ network_packages }}'
+
+- name: Install security packages
+  become: true
+  package:
+    name: '{{ security_packages }}'
+
+- name: Install media packages
+  become: true
+  package:
+    name: '{{ media_packages }}'
