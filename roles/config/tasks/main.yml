@@ -1,4 +1,12 @@
 ---
+- name: Set graphical.target as default
+  command: systemctl set-default graphical.target
+
+
+- name: Set workstation hostname
+  hostname:
+    name: '{{ hostname }}'
+
 - name: Apply config
   copy:
     src: '{{ item.src }}'
