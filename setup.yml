@@ -8,3 +8,7 @@
     - name: Include config role
       include_role:
         name: config
+
+    - name: Include services role
+      include_role:
+        name: services

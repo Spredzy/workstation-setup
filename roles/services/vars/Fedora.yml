@@ -1,0 +1,9 @@
+---
+system_services:
+  - bluetooth
+  - chrony
+  - slim
+
+
+user_services:
+  - pulseaudio
