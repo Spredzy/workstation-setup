@@ -1,5 +1,9 @@
 ---
 environment_packages:
+  - NetworkManager-wifi
+  - alsa-plugins-pulseaudio
+  - alsa-utils
+  - chrony
   - conky
   - dmenu
   - feh
@@ -7,13 +11,19 @@ environment_packages:
   - i3
   - i3lock
   - i3status
+  - iwl7260-firmware
+  - pavucontrol
+  - pulseaudio
+  - pulseaudio-module-bluetooth
   - rxvt-unicode
   - slim
   - tuned
   - xbacklight
-  - chrony
+  - xorg-x11-server-Xorg
+  - xorg-x11-xauth
 
 work_packages:
+  - ShellCheck
   - ack
   - docker
   - fedora-packager
@@ -38,6 +48,7 @@ work_packages:
   - vagrant-libvirt
   - vim
   - weechat
+  - yamllint
   - zathura
   - zsh
 
