@@ -1,0 +1,3 @@
+---
+- name: Include editor configuration
+  include_tasks: '{{ editor }}.yml'

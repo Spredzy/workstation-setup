@@ -6,6 +6,7 @@
         that:
           - windowmanager is defined and windowmanager != ''
           - terminal is defined and terminal != ''
+          - editor is defined and editor != ''
 
     - name: Include packages role
       include_role:
@@ -19,7 +20,7 @@
       include_role:
         name: services
 
-    - name: Include windownmanager
+    - name: Include windowmanager
       include_role:
         name: windowmanager
       vars:
@@ -30,3 +31,9 @@
         name: terminal
       vars:
         terminal: '{{ terminal }}'
+
+    - name: Include editor
+      include_role:
+        name: editor
+      vars:
+        editor: '{{ editor }}'

@@ -17,6 +17,7 @@
       i3status
 
 - name: Ensure slim is started at boot
+  become: true
   service:
     name: slim
-    enable: true
+    enabled: true

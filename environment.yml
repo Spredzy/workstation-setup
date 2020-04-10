@@ -1,0 +1,17 @@
+---
+# This file is an environment file example that aims to
+# product a reproducible setup for workstation setup.
+#
+# How to run this: ansible-playbook setup.yml -e @environment.yml
+
+# Window Manager
+#
+windowmanager: i3
+
+# Terminal
+#
+terminal: urxvt
+
+# Editor
+#
+editor: vim
