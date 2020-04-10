@@ -1,0 +1,21 @@
+---
+- name: Include Operating System specific vars
+  include_vars: '{{ ansible_distribution }}.yml'
+
+- name: Install packages
+  become: true
+  package:
+    name: '{{ urxvt_packages }}'
+
+- name: Ensure perl extensions path
+  file:
+    path: '~/.urxvt/ext'
+    state: directory
+    recurse: true
+
+- name: Ensure extentions are installsed
+  get_url:
+    url: '{{ item }}'
+    dest: '~/.urxvt/ext/{{ item | basename }}'
+  loop:
+    - 'https://github.com/simmel/urxvt-resize-font/blob/master/resize-font'

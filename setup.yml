@@ -12,3 +12,9 @@
     - name: Include services role
       include_role:
         name: services
+
+    - name: Include terminal
+      include_role:
+        name: terminal
+      vars:
+        terminal: '{{ terminal }}'

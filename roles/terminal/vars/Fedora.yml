@@ -1,0 +1,4 @@
+---
+urxvt_packages:
+  - rxvt-unicode
+  - rxvt-unicode-256color
