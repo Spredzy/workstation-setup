@@ -18,4 +18,4 @@
     url: '{{ item }}'
     dest: '~/.urxvt/ext/{{ item | basename }}'
   loop:
-    - 'https://github.com/simmel/urxvt-resize-font/blob/master/resize-font'
+    - 'https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font'

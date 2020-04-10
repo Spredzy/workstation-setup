@@ -1,6 +1,12 @@
 ---
 - hosts: localhost
   tasks:
+    - name: Assert required variables are passed
+      assert:
+        that:
+          - windowmanager is defined and windowmanager != ''
+          - terminal is defined and terminal != ''
+
     - name: Include packages role
       include_role:
         name: packages
@@ -12,6 +18,12 @@
     - name: Include services role
       include_role:
         name: services
+
+    - name: Include windownmanager
+      include_role:
+        name: windowmanager
+      vars:
+        windowmanager: '{{ windowmanager }}'
 
     - name: Include terminal
       include_role:

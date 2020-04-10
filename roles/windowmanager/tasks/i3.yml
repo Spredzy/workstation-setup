@@ -1,0 +1,22 @@
+---
+- name: Include Operating System specific vars
+  include_vars: '{{ ansible_distribution }}.yml'
+
+- name: Install windowmanager packages
+  become: true
+  package:
+    name: '{{ windowmanager_packages }}'
+
+- name: Ensure config paths exist
+  file:
+    path: '~/.config/{{ item }}'
+    state: directory
+    recurse: true
+  loop:
+    - i3
+      i3status
+
+- name: Ensure slim is started at boot
+  service:
+    name: slim
+    enable: true
