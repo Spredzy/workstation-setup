@@ -14,7 +14,7 @@
     recurse: true
   loop:
     - i3
-      i3status
+    - i3status
 
 - name: Ensure slim is started at boot
   become: true

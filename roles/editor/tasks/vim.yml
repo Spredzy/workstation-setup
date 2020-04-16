@@ -9,16 +9,19 @@
 
 - name: Ensure plugin path exists
   file:
-    path: ' ~/.vim/pack/vendor/start'
+    path: ' ~/.vim/pack/plugins/start'
     state: directory
     recurse: true
 
 - name: Install plugins
   git:
     repo: 'https://github.com/{{ item }}.git'
-    dest: '~/.vim/pack/vendor/start/{{ item | basename }}'
+    dest: '~/.vim/pack/plugins/start/{{ item | basename }}'
   loop:
     - Yggdroot/indentLine
     - airblade/vim-gitgutter
     - dense-analysis/ale
     - kien/ctrlp.vim
+    - mileszs/ack.vim
+    - cohama/lexima.vim
+    - tpope/vim-commentary
