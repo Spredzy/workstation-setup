@@ -1,7 +1,7 @@
 !-----------------------------------------------------------------------
 ! Xft settings
 !-----------------------------------------------------------------------
-Xft.dpi:                    101        /* Could be 96 but my lcd is weird */
+Xft.dpi:                    96        /* Could be 96 but my lcd is weird */
 Xft.antialias:              true
 Xft.rgba:                   none
 Xft.hinting:                true
@@ -70,7 +70,7 @@ URxvt.scrollBar:            false
 ! URxvt.matcher.button:       1
 ! URxvt.urlLauncher:          chromium
 !-----------------------------------------------------------------------
-URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,matcher
+URxvt.perl-ext-common:      default,resize-font,clipboard,url-select,keyboard-select,matcher
 URxvt.url-launcher:         /bin/firefox
 URxvt.matcher.button:       C1
 URxvt.url-select.launcher:  firefox

@@ -8,7 +8,6 @@
     name: '{{ system_services }}'
     state: started
     enabled: true
-    scope: global
 
 - name: Start and enable user services
   systemd:

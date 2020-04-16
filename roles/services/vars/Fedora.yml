@@ -1,7 +1,7 @@
 ---
 system_services:
   - bluetooth
-  - chrony
+  - chronyd
   - slim
 
 
