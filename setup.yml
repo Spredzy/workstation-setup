@@ -7,6 +7,7 @@
           - windowmanager is defined and windowmanager != ''
           - terminal is defined and terminal != ''
           - editor is defined and editor != ''
+          - hostname is defined and hostname != ''
 
     - name: Include packages role
       include_role:
