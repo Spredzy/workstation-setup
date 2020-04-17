@@ -1,5 +1,6 @@
 ---
 environment_packages:
+  - NetworkManager-openvpn
   - NetworkManager-wifi
   - alsa-plugins-pulseaudio
   - alsa-utils
@@ -19,6 +20,7 @@ environment_packages:
   - rxvt-unicode-256color
   - slim
   - tuned
+  - util-linux-user
   - xbacklight
   - xorg-x11-server-Xorg
   - xorg-x11-xauth
