@@ -25,3 +25,4 @@
     - mileszs/ack.vim
     - cohama/lexima.vim
     - tpope/vim-commentary
+    - antoyo/vim-licenses
